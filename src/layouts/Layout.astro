@@ -14,7 +14,7 @@ import Footer from "../components/Footer.astro";
       rel="icon"
       sizes="any"
       type="image/svg+xml"
-      href="/favicon-dark.svg"
+      href="/assets/favicon-dark.png"
     />
     <meta name="viewport" content="width=device-width" />
     <title>{title}</title>
@@ -47,12 +47,12 @@ import Footer from "../components/Footer.astro";
           document.documentElement.classList?.add("dark");
           document
             .querySelector("link[rel='icon']")
-            .setAttribute("href", "/favicon-dark.svg");
+            .setAttribute("href", "/assets/favicon-dark.png");
         } else {
           document.documentElement.classList?.remove("dark");
           document
             .querySelector("link[rel='icon']")
-            .setAttribute("href", "/favicon-light.svg");
+            .setAttribute("href", "/assets/favicon-light.png");
         }
       })();
     </script>
@@ -95,7 +95,7 @@ import Footer from "../components/Footer.astro";
         localStorage.setItem("hs_theme", "dark");
         html.classList.add("dark");
         html.classList.remove("light");
-        favicon?.setAttribute("href", "/favicon-dark.svg");
+        favicon?.setAttribute("href", "/assets/favicon-dark.png");
         updateTheme();
       });
 
@@ -103,7 +103,7 @@ import Footer from "../components/Footer.astro";
         localStorage.setItem("hs_theme", "light");
         html.classList.remove("dark");
         html.classList.add("light");
-        favicon?.setAttribute("href", "/favicon-light.svg");
+        favicon?.setAttribute("href", "/assets/favicon-light.png");
         updateTheme();
       });
     </script>
