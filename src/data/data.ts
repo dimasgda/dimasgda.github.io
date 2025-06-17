@@ -17,7 +17,7 @@ export const testimonials = [
   {
     name: "Putut",
     quote:
-      "The work was completed on time with satisfying results. Open to feedback, and quick to respond to questions or changes.",
+      "The work was completed on time with satisfying results. Open to feedback, and quick respond to questions.",
     profile: imgProfile,
   },
   {
@@ -103,7 +103,7 @@ export const skills = [
 export const experiences = [
   {
     image: dimfordev,
-    title: "Freelance Web Developer at dimfordev",
+    title: "Freelance Web Developer",
     description: "Personal Freelance Business",
     link: "https://github.com/ddimfordev",
     start: "December 2023",
@@ -119,7 +119,7 @@ export const experiences = [
     image: agsatu,
     title: "Web Developer Intern at CV Agsatu",
     description: "Software House based in Kediri, Indonesia",
-    link: "https://agsatu.com/",
+    link: "https://agsatu.com",
     start: "January 2025",
     end: "June 2025 ",
     points: [
@@ -147,7 +147,7 @@ export const experiences = [
     image: agsatu,
     title: "Web Developer Intern at CV Agsatu",
     description: "Software House based in Kediri, Indonesia",
-    link: "https://agsatu.com/",
+    link: "https://agsatu.com",
     start: "June 2024",
     end: "August 2024",
     points: [
