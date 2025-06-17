@@ -1,0 +1,39 @@
+---
+import { Image } from "astro:assets";
+import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+
+export async function getStaticPaths() {
+  const allProject: CollectionEntry<"projects">[] =
+    await getCollection("projects");
+  return allProject.map((project) => ({
+    params: { slug: project.slug },
+    props: { project },
+  }));
+}
+const { project } = Astro.props;
+---
+
+<Layout title={project.data.title} description={project.data.description}>
+  <a
+    href="/projects"
+    class="text-sm text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:outline-hidden focus:decoration-2 dark:text-neutral-500 dark:hover:text-neutral-400"
+    >Back</a
+  >
+  <section class="my-4 sm:my-8 space-y-4">
+    <h1 class="text-2xl font-bold text-gray-800 dark:text-neutral-200">
+      {project.data.title}
+    </h1>
+    <Image
+      src={project.data.image}
+      alt={project.data.title}
+      class="w-full rounded-sm border border-gray-200 dark:border-neutral-700"
+      width={800}
+      height={700}
+    />
+    <p class="text-sm text-neutral-700 dark:text-neutral-400">
+      {project.data.description}
+    </p>
+  </section>
+</Layout>

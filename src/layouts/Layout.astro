@@ -1,0 +1,111 @@
+---
+import "../styles/global.css";
+import "@fontsource/roboto";
+const { title, description } = Astro.props;
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="icon"
+      sizes="any"
+      type="image/svg+xml"
+      href="/favicon-dark.svg"
+    />
+    <meta name="viewport" content="width=device-width" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="author" content="Dimas Gilang Dwi Aji" />
+    <meta
+      name="robots"
+      content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    />
+    <link rel="canonical" href="https://dimasgda.vercel.app" />
+
+    <meta name="og:title" content={title} />
+    <meta name="og:description" content={description} />
+    <meta name="og:image" content="/favicon-dark.svg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="/favicon-dark.svg" />
+    <script is:inline>
+      (function () {
+        const theme = localStorage.getItem("hs_theme");
+        const prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches;
+        const isDark = theme === "dark" || (theme === "auto" && prefersDark);
+
+        if (isDark) {
+          document.documentElement.classList?.add("dark");
+          document
+            .querySelector("link[rel='icon']")
+            .setAttribute("href", "/favicon-dark.svg");
+        } else {
+          document.documentElement.classList?.remove("dark");
+          document
+            .querySelector("link[rel='icon']")
+            .setAttribute("href", "/favicon-light.svg");
+        }
+      })();
+    </script>
+  </head>
+  <body class="antialiased scroll-smooth dark:bg-neutral-900">
+    <Navbar />
+    <main class="w-full max-w-2xl mx-auto pt-10 md:pt-16 px-4 sm:px-6 lg:px-8">
+      <slot />
+    </main>
+    <Footer />
+    <script>
+      const html = document.documentElement;
+      const darkBtn = document.querySelector(
+        '[data-hs-theme-click-value="dark"]'
+      );
+      const lightBtn = document.querySelector(
+        '[data-hs-theme-click-value="light"]'
+      );
+
+      const favicon = document.querySelector("link[rel='icon']");
+
+      function updateTheme() {
+        const isDark = html.classList.contains("dark");
+        darkBtn?.classList.toggle("hidden", isDark);
+        lightBtn?.classList.toggle("hidden", !isDark);
+      }
+
+      updateTheme();
+
+      const toggleNavbarCollapse = document.getElementById(
+        "toggleNavbarCollapse"
+      );
+
+      toggleNavbarCollapse?.addEventListener("click", () => {
+        const collapse = document.querySelector(".hs-collapse");
+        collapse?.classList.toggle("hidden");
+      });
+
+      darkBtn?.addEventListener("click", () => {
+        localStorage.setItem("hs_theme", "dark");
+        html.classList.add("dark");
+        html.classList.remove("light");
+        favicon?.setAttribute("href", "/favicon-dark.svg");
+        updateTheme();
+      });
+
+      lightBtn?.addEventListener("click", () => {
+        localStorage.setItem("hs_theme", "light");
+        html.classList.remove("dark");
+        html.classList.add("light");
+        favicon?.setAttribute("href", "/favicon-light.svg");
+        updateTheme();
+      });
+    </script>
+  </body>
+</html>
