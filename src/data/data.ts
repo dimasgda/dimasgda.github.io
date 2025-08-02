@@ -109,10 +109,10 @@ export const experiences = [
     start: "December 2023",
     end: "Present",
     points: [
-      "Delivering custom web solutions to over 5 clients across sectors such as goverment, services, and internal companies operations.",
-      "Conducted client interviews to gather and validate requirements, ensuring a alignment between delivered features and client expectations",
-      "Architected application structures and development roadmaps based on system analysis,",
-      "Delivered end-to-end project lifecycles, including deployment, and post-launch support",
+      "Delivering custom web solutions to over 5 clients across sectors such as government, services, and internal companies operations.",
+      "Conducted client interviews to gather and validate requirements, ensuring alignment between delivered features and client expectations",
+      "Architected application structures and development roadmaps based on system analysis.",
+      "Delivered end-to-end project lifecycles, including deployment and post-launch support.",
     ],
   },
   {
@@ -121,11 +121,11 @@ export const experiences = [
     description: "Software House based in Kediri, Indonesia",
     link: "https://agsatu.com",
     start: "January 2025",
-    end: "June 2025 ",
+    end: "June 2025",
     points: [
       "Maintained and enhanced a web-based savings and loan system used by 4+ active clients.",
       "Delivered feature updates and fixed bugs, improving system stability.",
-      "Tested and debugged transactional workflows",
+      "Tested and debugged transactional workflows.",
       "Managed codebase with Git and GitLab in a collaborative workflow.",
     ],
   },
@@ -151,10 +151,10 @@ export const experiences = [
     start: "June 2024",
     end: "August 2024",
     points: [
-      "Contributed to a SaaS student attendance system, focused on mobile integration",
-      "Designed RESTful APIs in Laravel to support core attendance functionality",
+      "Contributed to a SaaS student attendance system, focused on mobile integration.",
+      "Designed RESTful APIs in Laravel to support core attendance functionality.",
       "Built geolocation-based submission APIs, validating user proximity to school.",
-      "Developed dynamic pages using vue components for submissions, confirmations, and leave requests.",
+      "Developed dynamic pages using Vue components for submissions, confirmations, and leave requests.",
     ],
   },
 ];
