@@ -3,17 +3,17 @@ const { year, title, description, slug } = Astro.props;
 ---
 
 <div class="space-y-1">
-  <p class="text-sm text-gray-500 dark:text-neutral-500">
+  <p class="text-sm text-neutral-500 dark:text-neutral-400">
     {year}
   </p>
-  <h5 class="font-medium text-sm text-gray-800 dark:text-neutral-200">
+  <h2 class="font-medium text-sm text-gray-800 dark:text-neutral-200">
     {title}
-  </h5>
-  <p class="text-sm text-gray-500 dark:text-neutral-500">
+  </h2>
+  <p class="text-sm text-neutral-500 dark:text-neutral-400">
     {description}
   </p>
   <a
-    class="text-sm text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:outline-hidden focus:decoration-2 dark:text-neutral-500 dark:hover:text-neutral-400"
+    class="text-sm text-neutral-500 underline hover:decoration-2 focus:outline-hidden focus:decoration-2 dark:text-neutral-400 dark:hover:text-neutral-300"
     href={`/projects/${slug}`}
   >
     Continue reading
