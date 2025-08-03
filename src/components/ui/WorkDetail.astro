@@ -6,7 +6,7 @@ const { start, end, title, description, points, image, link } = Astro.props;
 
 <div class="group relative flex gap-x-3">
   <div
-    class="relative group-last:after:hidden after:absolute after:top-8 after:-bottom-0 after:start-6 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700"
+    class="relative group-last:after:hidden after:absolute after:top-8 after:-bottom-9 after:start-6 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700"
   >
     <div class="relative z-10 size-12 flex justify-center items-center">
       <a href={link} target="_blank">
@@ -19,7 +19,7 @@ const { start, end, title, description, points, image, link } = Astro.props;
       </a>
     </div>
   </div>
-  <div class="grow pb-8 group-last:pb-0">
+  <div class="grow group-last:pb-0">
     <h3 class="mb-1 text-xs text-gray-600 dark:text-neutral-400">
       {start} - {end}
     </h3>
