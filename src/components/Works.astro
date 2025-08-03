@@ -1,11 +1,25 @@
 ---
 import { experiences } from "../data/data";
 import WorkDetail from "./ui/WorkDetail.astro";
+const latestWork = experiences[0];
 ---
 
 <section class="mt-10 sm:mt-14">
   <h2 class="mb-5 font-medium text-gray-800 dark:text-neutral-200">
-    Work experience
+    Recent Work
   </h2>
-  {experiences.map((item) => <WorkDetail {...item} />)}
+  <div class="relative">
+    <WorkDetail {...latestWork} />
+    <div
+      id="skills-shadow"
+      class="absolute bottom-0 left-0 w-full h-18 bg-gradient-to-t from-white dark:from-neutral-950 transition-all duration-300 ease-in-out"
+    >
+    </div>
+  </div>
+  <a
+    class="text-sm text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:outline-hidden focus:decoration-2 dark:text-neutral-500 dark:hover:text-neutral-400"
+    href="/experiences"
+  >
+    See all experiences
+  </a>
 </section>

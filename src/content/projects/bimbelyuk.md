@@ -1,5 +1,5 @@
 ---
-title: 'Bimbelyuk'
+title: 'Landing page for Bimbelyuk'
 image: '/assets/images/bimbelyuk.webp'
 year: 2024
 description: 'Landing page for education agency bimbelyuk'

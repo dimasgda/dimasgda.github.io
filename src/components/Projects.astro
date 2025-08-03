@@ -1,27 +1,38 @@
 ---
-import ProjectCard from "./ui/ProjectCard.astro";
 import type { CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
+import ProjectList from "./ProjectList.astro";
 
-const allProjects: CollectionEntry<"projects">[] = (
+const top2Projects: CollectionEntry<"projects">[] = (
   await getCollection("projects")
-).sort(
-  (a: CollectionEntry<"projects">, b: CollectionEntry<"projects">) =>
-    b.data.year.valueOf() - a.data.year.valueOf()
-);
-
-const projects = allProjects.slice(0, 3).map((item) => {
-  return {
-    name: item.data.title,
-    image: item.data.image,
-    link: `/projects/${item.slug}`,
-  };
-});
+)
+  .sort(
+    (a: CollectionEntry<"projects">, b: CollectionEntry<"projects">) =>
+      b.data.year.valueOf() - a.data.year.valueOf()
+  )
+  .slice(0, 1);
 ---
 
 <section class="mt-10 sm:mt-14">
-  <h2 class="mb-5 font-medium text-gray-800 dark:text-neutral-200">Projects</h2>
-  <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
-    {projects.map((item) => <ProjectCard {...item} />)}
+  <h2 class="mb-3 font-medium text-neutral-800 dark:text-neutral-200">
+    Latest Project
+  </h2>
+  <div class="space-y-8 mb-4">
+    {
+      top2Projects.map((project) => (
+        <ProjectList
+          year={project.data.year}
+          title={project.data.title}
+          description={project.data.description}
+          slug={project.slug}
+        />
+      ))
+    }
   </div>
+  <a
+    class="text-sm text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:outline-hidden focus:decoration-2 dark:text-neutral-500 dark:hover:text-neutral-400"
+    href="/projects"
+  >
+    See all projects
+  </a>
 </section>

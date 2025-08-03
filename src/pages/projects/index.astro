@@ -1,8 +1,8 @@
 ---
-import { Image } from "astro:assets";
 import Layout from "../../layouts/Layout.astro";
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
+import ProjectList from "../../components/ProjectList.astro";
 
 const allProjects: CollectionEntry<"projects">[] = (
   await getCollection("projects")
@@ -12,43 +12,20 @@ const allProjects: CollectionEntry<"projects">[] = (
 );
 ---
 
-<Layout title="My Projects" description="My Personal Projects">
-  <section class="my-4 sm:my-8">
-    <h2 class="mb-5 font-medium text-lg text-gray-800 dark:text-neutral-200">
-      My Projects
-    </h2>
-    <ul class="space-y-8">
-      {
-        allProjects.map((project) => (
-          <li class="flex gap-4">
-            <Image
-              src={project.data.image}
-              alt={project.data.title}
-              class="size-24 object-cover bg-gray-100 rounded-lg dark:bg-neutral-800"
-              loading="eager"
-              width={400}
-              height={400}
-            />
-            <div class="space-y-1">
-              <p class="text-sm text-gray-500 dark:text-neutral-500">
-                {project.data.year}
-              </p>
-              <h5 class="font-medium text-sm text-gray-800 dark:text-neutral-200">
-                {project.data.title}
-              </h5>
-              <p class="text-sm text-gray-500 dark:text-neutral-500">
-                {project.data.description}
-              </p>
-              <a
-                class="text-sm text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:outline-hidden focus:decoration-2 dark:text-neutral-500 dark:hover:text-neutral-400"
-                href={`/projects/${project.slug}`}
-              >
-                Continue reading
-              </a>
-            </div>
-          </li>
-        ))
-      }
-    </ul>
+<Layout title="Projects" description="My Freelance Projects">
+  <h1 class="mb-5 font-bold text-lg text-gray-800 dark:text-neutral-200">
+    My Freelance Projects
+  </h1>
+  <section class="space-y-8">
+    {
+      allProjects.map((project) => (
+        <ProjectList
+          year={project.data.year}
+          title={project.data.title}
+          description={project.data.description}
+          slug={project.slug}
+        />
+      ))
+    }
   </section>
 </Layout>
