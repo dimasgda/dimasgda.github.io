@@ -26,6 +26,7 @@ This solution enabled DPRD Kediri to digitize their legal documentation processe
 - **Backend:** Laravel 11
 - **Frontend:** React, TailwindCSS, Inertia
 - **Architecture:**  Single Page Application (SPA) with Laravel server-side routing
+- **Deployment:** VPS
 
 ## Documentation
 ---
