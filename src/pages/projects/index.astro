@@ -4,9 +4,12 @@ import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 import ProjectList from "../../components/ProjectList.astro";
 
-const allProjects: CollectionEntry<"projects">[] =
-  await getCollection("projects");
-console.log(allProjects);
+const allProjects: CollectionEntry<"projects">[] = (
+  await getCollection("projects")
+).sort(
+  (a: CollectionEntry<"projects">, b: CollectionEntry<"projects">) =>
+    b.data.year.valueOf() - a.data.year.valueOf()
+);
 ---
 
 <Layout title="Projects" description="My Freelance Projects">
