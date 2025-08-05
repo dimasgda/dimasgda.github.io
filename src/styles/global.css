@@ -4,3 +4,23 @@
 @theme {
   --font-sans: "Roboto", "sans-serif";
 }
+
+#content p {
+  @apply text-neutral-900 dark:text-neutral-200 text-justify text-sm m-0 p-0;
+}
+
+#content h2 {
+  @apply text-neutral-900 dark:text-neutral-200 mt-4 mb-0 p-0;
+}
+
+#content hr {
+  @apply text-neutral-900 dark:text-neutral-200 my-2;
+}
+
+#content ul {
+  @apply list-disc ms-4 mt-3 space-y-1.5 text-justify;
+}
+
+#content li {
+  @apply ps-1 text-sm text-neutral-700 dark:text-neutral-300;
+}

@@ -1,5 +1,4 @@
 ---
-import { Image } from "astro:assets";
 import Layout from "../../layouts/Layout.astro";
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
@@ -13,27 +12,23 @@ export async function getStaticPaths() {
   }));
 }
 const { project } = Astro.props;
+import Content from "../../content/projects/jdih-dprd-kota-kediri.md";
 ---
 
-<Layout title={project.data.title} description={project.data.description}>
+<Layout
+  title={`${project.data.title} - Projects`}
+  description={project.data.description}
+>
+  <h1 class="mb-5 font-bold text-lg text-gray-800 dark:text-neutral-200">
+    {project.data.title}
+  </h1>
+  <section class="space-y-6" id="content">
+    <Content />
+  </section>
   <a
     href="/projects"
-    class="text-sm text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:outline-hidden focus:decoration-2 dark:text-neutral-500 dark:hover:text-neutral-400"
-    >Back</a
+    class="text-sm text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:outline-hidden focus:decoration-2 dark:text-neutral-500 dark:hover:text-neutral-400 block mt-10"
   >
-  <section class="my-4 sm:my-8 space-y-4">
-    <h1 class="text-2xl font-bold text-gray-800 dark:text-neutral-200">
-      {project.data.title}
-    </h1>
-    <Image
-      src={project.data.image}
-      alt={project.data.title}
-      class="w-full rounded-sm border border-gray-200 dark:border-neutral-700"
-      width={800}
-      height={700}
-    />
-    <p class="text-sm text-neutral-700 dark:text-neutral-400">
-      {project.data.description}
-    </p>
-  </section>
+    See all Projects
+  </a>
 </Layout>
