@@ -30,5 +30,5 @@ This solution enabled DPRD Kediri to digitize their legal documentation processe
 ## Documentation
 ---
 <div class="grid grid-cols-1 lg:grid-cols-3 gap-2">
-    <img src="/public/assets/images/jdih-dprd-kota-kediri.webp" alt="JDIH DPRD Kota Kediri" class="rounded-xs">
+    <img src="/assets/images/jdih-dprd-kota-kediri.webp" alt="JDIH DPRD Kota Kediri" class="rounded-xs">
 </div>
