@@ -39,6 +39,18 @@ import Footer from "../components/Footer.astro";
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content="/assets/images/opengraph.png" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "email": "mailto:dimasgilang0803@gmail.com",
+        "image": "/assets/images/opengraph.png",
+        "jobTitle": "Web Developer",
+        "name": "Dimas Gilang Dwi Aji",
+        "telephone": "+62 851-8200-6833",
+        "url": "http://www.dimasgda.tech"
+      }
+    </script>
     <script is:inline>
       (function () {
         const theme = localStorage.getItem("hs_theme") || "dark";
