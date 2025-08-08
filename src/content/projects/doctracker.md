@@ -1,6 +1,5 @@
 ---
-title: 'Legal Document Management – Dinas Kesehatan Kota Kediri'
-image: '/assets/images/dinkes-docs.webp'
+title: 'Legal Document Management'
 year: 2025
 description: 'A legal document management system with approval workflows for the Health Department of Kediri City'
 ---

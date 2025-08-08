@@ -1,6 +1,5 @@
 ---
 title: 'JDIH DPRD Kota Kediri'
-image: '/assets/images/jdih-dprd-kota-kediri.webp'
 year: 2024
 description: 'A digital Legal Documentation and Information system for DPRD of Kediri City'
 ---

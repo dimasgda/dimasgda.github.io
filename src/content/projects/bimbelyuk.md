@@ -1,6 +1,5 @@
 ---
 title: 'BimbelYuk Landing Page'
-image: '/assets/images/bimbelyuk-landing-page.webp'
 year: 2024
 description: 'A marketing-focused landing page for BimbelYuk, an online tutoring startup'
 ---
