@@ -29,5 +29,5 @@ The integration of SEO best practices helped improve their online discoverabilit
 ## Documentation
 ---
 <div class="grid grid-cols-1 lg:grid-cols-3 gap-2">
-    <img src="/assets/images/ptbiner.webp" alt="CMS & Company Website – PT Bintang Energy Surabaya" class="rounded-xs">
+    <img src="/assets/images/ptbiner.webp" alt="CMS & Company Website – PT Bintang Energy Surabaya" class="rounded-xs" loading="lazy">
 </div>

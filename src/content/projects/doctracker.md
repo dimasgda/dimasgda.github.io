@@ -31,5 +31,5 @@ This solution improved visibility, accountability, and turnaround time for legal
 ## Documentation
 ---
 <div class="grid grid-cols-1 lg:grid-cols-3 gap-2">
-    <img src="/assets/images/doctracker.webp" alt="Legal Document Management – Dinas Kesehatan Kota Kediri" class="rounded-xs">
+    <img src="/assets/images/doctracker.webp" alt="Legal Document Management – Dinas Kesehatan Kota Kediri" class="rounded-xs" loading="lazy">
 </div>

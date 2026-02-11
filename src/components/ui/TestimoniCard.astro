@@ -10,7 +10,7 @@ const { profile, quote, name, isStart } = Astro.props;
 
     <footer class="mt-3">
       <div class="flex items-center gap-x-2">
-        <Image class="shrink-0 size-5 rounded-full" src={profile} alt={name} />
+        <Image class="shrink-0 size-5 rounded-full" src={profile} alt={name} loading="lazy" />
         <div class="grow">
           <div class="text-xs text-gray-500 dark:text-neutral-500">
             {name}
@@ -19,5 +19,4 @@ const { profile, quote, name, isStart } = Astro.props;
       </div>
     </footer>
   </blockquote>
-  <!-- End Review -->
 </div>

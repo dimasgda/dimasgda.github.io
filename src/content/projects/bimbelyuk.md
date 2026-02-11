@@ -28,5 +28,5 @@ The result is a conversion-oriented landing page that effectively communicates t
 ## Documentation
 ---
 <div class="grid grid-cols-1 lg:grid-cols-3 gap-2">
-    <img src="/assets/images/bimbelyuk-landing-page.webp" alt="BimbelYuk Landing Page" class="rounded-xs">
+    <img src="/assets/images/bimbelyuk-landing-page.webp" alt="BimbelYuk Landing Page" class="rounded-xs" loading="lazy">
 </div>
