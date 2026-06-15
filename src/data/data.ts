@@ -12,6 +12,7 @@ import dlabs from "../assets/dlabs.png";
 import dimfordev from "../assets/dimfordev.png";
 import smkn1kediri from "../assets/smkn1kediri.png";
 import polinema from "../assets/polinema.png";
+import obi from "../assets/obi.png";
 
 export const testimonials = [
   {
@@ -102,8 +103,21 @@ export const skills = [
 
 export const experiences = [
   {
+    image: obi,
+    title: "Software Developer at PT Online Biz Indonesia",
+    description: "Software House based in Jakarta, Indonesia",
+    link: "https://onlinebiz.co.id",
+    start: "August 2025",
+    end: "Present",
+    points: [
+      "Conducted research on technical features to ensure implementations directly aligned with user requirements and optimal user experience.",
+      "Integrated the DOKU payment gateway as an alternative payment method, expanding payment options for users",
+      "Improved application responsiveness by 50% by refactoring the invoice and email delivery system into a background job architecture.",
+    ],
+  },
+  {
     image: dimfordev,
-    title: "Freelance Web Developer",
+    title: "Freelance Web Developer (Self-employed)",
     description: "Personal Freelance Business",
     link: "/",
     start: "December 2023",
